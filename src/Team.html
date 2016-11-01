@@ -1,0 +1,59 @@
+import React, { Component } from 'react';
+import logo from '../images/superda.png';
+import './styles/App.css';
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
+
+
+
+
+class App extends Component {
+  render() {
+    return (
+
+
+      <Router history={hashHistory}>
+      <Route path='/'Team={Team}>
+      <IndexRoute App={Home} />
+      <Route path='/' ASDF={ASDF}/>
+          </Route>
+        </Router>
+
+      )
+    }
+  }
+
+  const Nav = () => (
+    <div>
+    <Link to='/'>Home</Link>&nbsp;
+  <Link to='/address'>Address</Link>
+  </div>
+  )
+
+  const Container = (props) => <div>
+  <Nav />
+  {props.children}
+  </div>
+
+
+      <div className="App">
+      <div className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+      <h2>Admin sivu</h2>
+      <h3> Täällä voit antaa pisteet</h3>
+      </div>
+
+    <div className="topnav">
+    <ul>
+     <li><a href="../helloworld.html">Home</a></li>
+    <li><a href="">News</a></li>
+    <li><a href="">Contact</a></li>
+     <li><a href="">About</a></li>
+     </ul>
+    </div>
+        const Home = () => <p className="App-intro">Odota hetki ladataan koodi<code>Hyvinjanna.js</code> Noniin nyt meillä on jännenpää:)!
+        </p>
+
+
+
+
+export default App;
