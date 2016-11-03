@@ -9,12 +9,12 @@ class App extends Component {
     return (
       <Router history={hashHistory}>
         <Route path='/' component={Container}>
-          <IndexRoute component={Home} />
-          <Route path='/team' component={Team}>
+          <IndexRoute component={Etusivu} />
+          <Route path='/hallinta' component={Hallinta}>
             <IndexRoute component={TwitterFeed} />
             <Route path='instagram' component={Instagram} />
           </Route>
-          <Route path='/about(/:name)' component={About} />
+          <Route path='/pisteet' component={Pisteet} />
           <Route path='/namedComponent' component={NamedComponents}>
             <IndexRoute components={{ title: Title, subTitle: SubTitle }} />
           </Route>
@@ -48,9 +48,9 @@ const Nav = () => (
 
   <div className="topnav">
   <ul>
-    <li><IndexLink activeClassName='active' to='/'>Home</IndexLink>&nbsp;</li>
-    <li><IndexLink activeClassName='active' to='/team'>Team</IndexLink>&nbsp;</li>
-    <li><IndexLink activeClassName='active' to='/about'>About</IndexLink>&nbsp;</li>
+    <li><IndexLink activeClassName='active' to='/'>Etusivu</IndexLink>&nbsp;</li>
+    <li><IndexLink activeClassName='active' to='/hallinta'>Hallinta</IndexLink>&nbsp;</li>
+    <li><IndexLink activeClassName='active' to='/pisteet'>Pisteet</IndexLink>&nbsp;</li>
     <li><IndexLink activeClassName='active' to='/namedComponent'>Named Components</IndexLink></li>
     </ul>
   </div>
@@ -62,23 +62,23 @@ const Container = (props) => <div>
   {props.children}
 </div>
 
-const Home = () => <h1>Hello from Home!</h1>
+const Etusivu = () => <h1>Tervetuloa SuperAda-tapahtuman Admin-sivulle!</h1>
 
-const Team = (props) => <div>
+const Hallinta = (props) => <div>
   <br />
   <Link to='/address'>Twitter Feed</Link>&nbsp;
   <Link to='/address/instagram'>Instagram Feed</Link>
-  <h1>We are located at 555 Jackson St.</h1>
+  <h1>Täällä pääset arvostelemaan joukkueita</h1>
   {props.children}
 </div>
 
 const Instagram = () => <h3>Instagram Feed</h3>
 const TwitterFeed = () => <h3>Twitter Feed</h3>
 
-const About = (props) => (
+const Pisteet = (props) => (
   <div>
-    <h3>Welcome to the About Page</h3>
-    { props.params.name && <h2>Hello, {props.params.name}</h2>}
+    <h3>Eiköhän pisteytetä joukkueet?</h3>
+    
   </div>
 )
 

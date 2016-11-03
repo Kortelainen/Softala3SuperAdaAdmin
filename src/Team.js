@@ -12,7 +12,7 @@ class Team extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Admin sivu</h2>
-          <h3> HAISTAPASKA</h3>
+          <h3> </h3>
         </div>
 
 
