@@ -30,3 +30,8 @@ export default class Login extends React.Component {
     );
   }
 }
+
+ReactDOM.render(
+  <login />,
+  document.getElementById('root')
+);
